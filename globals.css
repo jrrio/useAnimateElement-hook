@@ -1,0 +1,143 @@
+/******************************************************
+     Animations effects adapted from
+     https://codepen.io/marcelo-ribeiro/pen/PbJwLG
+ *****************************************************/
+[data-animation] {
+  opacity: 0;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.flipInY {
+  animation-name: flipInY;
+}
+
+.flipOutY {
+  animation-name: flipInY;
+  animation-direction: reverse;
+}
+
+@keyframes flipInY {
+  0% {
+    opacity: 0;
+    transform: perspective(90vw) rotateY(67.5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInleft;
+}
+
+@keyframes slideInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.zoomReverseIn {
+  animation-name: zoomReverseIn;
+}
+
+@keyframes zoomReverseIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
